@@ -1,6 +1,24 @@
 composer.phar
 /vendor/
+vendor/
+config/
+#compiled/
+/.frdl/
+/frdlweb/
+/backup*/
+backup/
+backup*/
+cache/
+custom/
+data/
+#dist/
+#dist*/
+logs/
+log/
+frdl.project.json
+.env
+node_modules/
+/node_modules/
+.bash
+.bash*
 
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
