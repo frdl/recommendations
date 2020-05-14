@@ -21,4 +21,6 @@ node_modules/
 /node_modules/
 .bash
 .bash*
-
+frdl.stub.config.php
+frdl.version.config.php
+frdl.workspaces.php
