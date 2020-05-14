@@ -1,0 +1,17 @@
+{
+    "name": "frdlweb/recommendations",
+    "license": "MIT",
+    "type" : "library",
+    "description": "Interfaces and abstractions", 
+    "require": {
+        "php": "^5.3 | >=7.1",
+        "psr/container": "^1.0",
+        "psr/http-message" : "^1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "frdl\\": "src/frdl/",            
+            "frdlweb\\": "src/frdlweb/"
+        }
+    }
+}
