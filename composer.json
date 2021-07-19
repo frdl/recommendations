@@ -2,9 +2,10 @@
     "name": "frdlweb/recommendations",
     "license": "MIT",
     "type" : "library",
+    "Author":"Till Wehowski",
     "description": "Interfaces and abstractions", 
     "require": {
-        "php": "^5.3 | >=7.1",
+        "php": ">=7.2",
         "psr/container": "^1.0",
         "psr/http-message" : "^1.0.1",
         "aura/payload-interface" : "3.0.1" 
@@ -16,7 +17,8 @@
     "autoload": {
         "psr-4": {
             "frdl\\": "src/frdl/",            
-            "frdlweb\\": "src/frdlweb/"
+            "frdlweb\\": "src/frdlweb/",            
+            "Webfan\\": "src/Webfan/"
         }
     }
 }
