@@ -44,7 +44,7 @@ const ACCESS_LEVEL_CONTEXT = 16;
   public function getUrl($class, $server, $salt = null, $parseVars = false);
   public function loadClass($class, $salt = null);
   public function withSalt(bool $salted = null);
-  public function register($throw = true, $prepend = false):
+  public function register($throw = true, $prepend = false);
   public function Autoload($class); 
   public function withClassmap(array $classMap =  [
      'GuzzleHttp\\uri_template' => 'https://03.webfan.de/install/?salt=${salt}&version=${version}&source=GuzzleHttp\choose_handler',
