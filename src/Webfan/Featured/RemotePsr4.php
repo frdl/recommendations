@@ -4,7 +4,7 @@ namespace Webfan\Featured;
 
 
 interface RemotePsr4{
-
+/*
 //const HASH_ALGO = 'sha1';
 const ACCESS_LEVEL_SHARED = 0;
 const ACCESS_LEVEL_PUBLIC = 1;
@@ -12,25 +12,26 @@ const ACCESS_LEVEL_OWNER = 2;
 const ACCESS_LEVEL_PROJECT = 4;
 const ACCESS_LEVEL_BUCKET = 8;
 const ACCESS_LEVEL_CONTEXT = 16;
-
+*/
+   public function withServers(array $servers) : self;
   //Alias?__construct
-  public function withServer($server = 'frdl.webfan.de', 
-   $register = true,
-   $version = 'latest',
-   $allowFromSelfOrigin = false,
-   $salted = false, 
+  public function withServer(string $server /*= 'frdl.webfan.de'*/, 
+ bool  $register = true,
+  string $version = 'latest',
+ bool  $allowFromSelfOrigin = false,
+bool   $salted = false, 
    $classMap = null, 
-   $cacheDirOrAccessLevel = self::ACCESS_LEVEL_SHARED, 
+   $cacheDirOrAccessLevel = null ,//= self::ACCESS_LEVEL_SHARED, 
     $cacheLimit = null, 
-    $password = null);
+    $password = null):self;
 
-  public function withNamespace($prefix, $server, $prepend = false);
-  public function getUrl($class, $server, $salt = null, $parseVars = false);
-  public function loadClass($class, $salt = null);
+  public function withNamespace(string $prefix, string $server, bool $prepend = false):self;
+  public function getUrl(string $class, string $server, string $salt = null, bool $parseVars = false):string;
+  public function loadClass(string $class,string $salt = null);
   public function withSalt(bool $salted = null);
-  public function register($throw = true, $prepend = false);
-  public function Autoload($class); 
-  public function withClassmap(array $classMap =  [
+  public function register(bool $throw = true,bool $prepend = false);
+  public function Autoload(string $class); 
+  public function withClassmap(array $classMap /*=  [
      'GuzzleHttp\\uri_template' => 'https://03.webfan.de/install/?salt=${salt}&version=${version}&source=GuzzleHttp\choose_handler',
      'GuzzleHttp\\describe_type' => 'https://03.webfan.de/install/?salt=${salt}&version=${version}&source=GuzzleHttp\choose_handler',
      'GuzzleHttp\\headers_from_lines' => 'https://03.webfan.de/install/?salt=${salt}&version=${version}&source=GuzzleHttp\choose_handler',
@@ -134,6 +135,7 @@ const ACCESS_LEVEL_CONTEXT = 16;
 
 //https://raw.githubusercontent.com/elastic/elasticsearch-php/v7.12.0/src/autoload.php
 'Elasticsearch\\' => 'https://raw.githubusercontent.com/elastic/elasticsearch-php/v7.12.0/src/${class}.php?cache_bust=${salt}',
-]);
+]*/
+):self;
 
 }
