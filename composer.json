@@ -21,7 +21,7 @@
         "psr-4": {
             "frdl\\": "src/frdl/",            
             "frdlweb\\": "src/frdlweb/",            
-            "Webfan\\": "src/Webfan/"
+            "Webfan\Featured\\": "src/Webfan/Featured/"
         }
     }
 }
