@@ -23,22 +23,6 @@ const ACCESS_LEVEL_CONTEXT = 16;
    $cacheDirOrAccessLevel = self::ACCESS_LEVEL_SHARED, 
     $cacheLimit = null, 
     $password = null);
-  
-  
-  public static function getInstance(  
-  $server = [,
-    '03.webfan.de',
-    'cdn.frdl.io',  
-    'frdl.frdl.io',      
-            
-  ],
-  $register = true, 
-  $version = 'latest',
-  $allowFromSelfOrigin = false,
-  $salted = false,
-  $classMap = null, 
-  $cacheDirOrAccessLevel = self::ACCESS_LEVEL_SHARED,   
-  $cacheLimit = null, $password = null);
 
   public function withNamespace($prefix, $server, $prepend = false);
   public function getUrl($class, $server, $salt = null, $parseVars = false);
