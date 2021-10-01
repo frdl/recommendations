@@ -1,16 +1,16 @@
 <?php
-
 namespace Frdlweb\Type\Is;
+use Frdlweb\Contract\Webfantized\TypeAssertion;
 
-	class CallableDefinition
-	{
+class CallableDefinition implements TypeAssertion
+{
 	 protected $payload;
 	 protected $info = null;
      public function __construct(mixed $payload){
 		 $this->payload=$payload;
 	 }
 		   
-	public function assert(bool $throw=true):bool{
+	public function assert(bool $throw=true):bool|Exception{
 		 try{
 			$result = $this->validate();
 		 }catch(Exception $e){
