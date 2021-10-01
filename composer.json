@@ -12,13 +12,15 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.2 || >=8.0",
         "psr/container": "*",
         "psr/http-message" : "*",
         "aura/payload-interface" : "*" 
     },
     "autoload": {
         "psr-4": {
+            "Frdlweb\\Contract\\": "src/Frdlweb/Contract/",
+            "Frdlweb\\Type\\": "src/Frdlweb/Type/",
             "Frdl\\Webfantized\\": "src/Frdl/Webfantized/",
             "frdl\\": "src/frdl/",            
             "frdlweb\\": "src/frdlweb/",            
