@@ -5,5 +5,5 @@ namespace Frdlweb\Contract\Autoload;
 
 	interface RecordableClassLoaderInterface extends ClassLoaderInterface {
 	    	public function record():void;
-	    	public function getRequiredClasses():array;
+	    	public function getAutoloadCallstack():array;
 	}
