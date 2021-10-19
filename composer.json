@@ -9,13 +9,7 @@
         }
     ],
     "description": "Interfaces and abstractions",    
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.frdl.de",
-            "canonical": false
-        }
-    ],
+  
     "require": {
         "php": ">=7.2 || >=8.0",
         "psr/container": "*",
