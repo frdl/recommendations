@@ -1,5 +1,5 @@
 {
-    "name": "frdlweb/recommendations",
+    "name": "frdl/recommendations",
     "type" : "library",
     "description": "Interfaces and abstractions",    
   "license": "MIT",	 
