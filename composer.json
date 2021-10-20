@@ -1,10 +1,14 @@
 {
     "name": "frdlweb/recommendations",
-
-    "license": "MIT",
-
+    "type" : "library",
     "description": "Interfaces and abstractions",    
-  
+  "license": ["MIT"],	 
+  "authors":[
+	  {
+	    "name" : "Till Wehowski",
+	    "email" : "software@frdl.de"
+	  }
+	  ],  
     "require": {
         "php": ">=7.2 || >=8.0",
         "psr/container": "*",
