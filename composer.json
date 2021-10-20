@@ -2,7 +2,7 @@
     "name": "frdlweb/recommendations",
     "type" : "library",
     "description": "Interfaces and abstractions",    
-  "license": ["MIT"],	 
+  "license": "MIT",	 
   "authors":[
 	  {
 	    "name" : "Till Wehowski",
