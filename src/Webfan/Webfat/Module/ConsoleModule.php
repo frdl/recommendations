@@ -2,7 +2,7 @@
 
 namespace Webfan\Webfat\Module;
 
-use namespace Webfan\Webfat\Intent\IntentInterface;
+use Webfan\Webfat\Intent\IntentInterface;
 use Webfan\Webfat\Module as BaseModule;
 use Webfan\Webfat\Module\ModuleInterface;
 
