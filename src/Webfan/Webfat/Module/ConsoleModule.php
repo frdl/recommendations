@@ -8,5 +8,5 @@ use Webfan\Webfat\Module\ModuleInterface;
 
 class ConsoleModule extends BaseModule implements IntentInterface
 {
-  protected $name = 'main';
+  protected $name = 'console';
 }
