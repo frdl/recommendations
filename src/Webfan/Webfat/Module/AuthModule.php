@@ -8,5 +8,5 @@ use Webfan\Webfat\Module\ModuleInterface;
 
 class AuthModule extends BaseModule implements IntentInterface
 {
-  protected $name = 'main';
+  protected $name = 'auth';
 }
