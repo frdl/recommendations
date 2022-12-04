@@ -6,7 +6,7 @@ use Webfan\Webfat\Module\ModuleInterface;
 
 abstract class Module implements ModuleInterface
 {
-   use Webfan\ngModuleTrait;
+   use \Webfan\ngModuleTrait, \Nette\SmartObject;
    
    public function getName():string
    {
