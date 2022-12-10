@@ -3,6 +3,7 @@
 namespace Webfan\Webfat;
 
 use Webfan\Webfat\Module\ModuleInterface;
+use Psr\Container\ContainerInterface;
 
 abstract class Module implements ModuleInterface
 {
@@ -29,7 +30,8 @@ abstract class Module implements ModuleInterface
       $this->_niy(__METHOD__);
    }
    
-	public function getContainer() : ?ContainerInterface
+	
+   public function getContainer() : ?ContainerInterface
    {
       $this->_niy(__METHOD__);
    }
