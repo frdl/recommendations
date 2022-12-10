@@ -5,6 +5,8 @@ namespace Webfan\Webfat;
 use Webfan\Webfat\Module\ModuleInterface;
 use Psr\Container\ContainerInterface;
 
+use Webfan\Webfat\App\AbstractContainerBuilder;
+
 abstract class Module implements ModuleInterface
 {
    use \Webfan\ngModuleTrait, 
@@ -20,12 +22,14 @@ abstract class Module implements ModuleInterface
       $this->_niy(__METHOD__);
    }
    
-	public function uninstall(array $args = [], string $section = null)
+	
+   public function uninstall(array $args = [], string $section = null)
    {
       $this->_niy(__METHOD__);
    }
    
-	public function build(array $args = [], string $section = null)
+	
+   public function build(array $args = [], string $section = null)
    {
       $this->_niy(__METHOD__);
    }
@@ -35,7 +39,13 @@ abstract class Module implements ModuleInterface
    {
       $this->_niy(__METHOD__);
    }
-   
+    
+	
+   public function getContainerBuilder() : ?AbstractContainerBuilder
+   {
+      $this->_niy(__METHOD__);
+   }
+	
    public function getName():string
    {
       return $this->name; 
