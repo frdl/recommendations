@@ -11,5 +11,5 @@ use Webfan\Webfat\Module\ModuleInterface;
 
 final class CoreModule extends GenericModuleCore implements ModuleInterface, IntentInterface
 {
-  
+  protected $name = 'core';
 }
