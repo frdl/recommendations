@@ -7,14 +7,35 @@ use Psr\Container\ContainerInterface;
 
 use Webfan\Webfat\App\AbstractContainerBuilder;
 
+# use Webfan\Webfat\Intent\IntentInterface;
+
+use Webfan\Webfat\App\GenericModuleCoreSetup;
+
 abstract class Module implements ModuleInterface
 {
-   use \Webfan\ngModuleTrait;
+   use \Webfan\withClassCastingTrait,
+	\Webfan\Webfat\withKernelTrait,
+	\Webfan\ngModuleTrait,
+        \Webfan\configModuleTrait;	
    
-   public function _niy($method)
-   {
-       throw new \Exception(sprintf('You mus implement and overwrite the method %1$s in the class %2$s!', $method, get_class($this)));
-   }
+	
+ public function createSetup($setupModuleTraitLikeObjectOrArray){
+		if(is_array($setupModuleTraitLikeObjectOrArray) && !isset($setupModuleTraitLikeObjectOrArray['moduleClassName']) ){
+			$setupModuleTraitLikeObjectOrArray['moduleClassName'] = \get_class($this);
+		}elseif(is_object($setupModuleTraitLikeObjectOrArray) 
+				&& $setupModuleTraitLikeObjectOrArray instanceof \stdclass
+				&& !isset($setupModuleTraitLikeObjectOrArray->moduleClassName) 
+			   ){
+			$setupModuleTraitLikeObjectOrArray->moduleClassName = \get_class($this);
+		}else{
+			$setupModuleTraitLikeObjectOrArray = \Webfan\Script::create($setupModuleTraitLikeObjectOrArray);
+			$setupModuleTraitLikeObjectOrArray->prototype = \Webfan\Script::create([
+                           'moduleClassName' => \get_class($this),
+			]);
+			$setupModuleTraitLikeObjectOrArray = $setupModuleTraitLikeObjectOrArray();
+		}
+   return $this->classCasting($this->classCasting(GenericModuleCoreSetup::class, $setupModuleTraitLikeObjectOrArray), $this);
+ }
    
 
 	
