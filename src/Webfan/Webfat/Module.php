@@ -16,7 +16,8 @@ abstract class Module implements ModuleInterface
    use \Webfan\withClassCastingTrait,
 	\Webfan\Webfat\withKernelTrait,
 	\Webfan\ngModuleTrait,
-        \Webfan\configModuleTrait;	
+        \Webfan\configModuleTrait,
+	\Webfan\Webfat\withModulesTrait;	
    
 	
  public function createSetup($setupModuleTraitLikeObjectOrArray){
