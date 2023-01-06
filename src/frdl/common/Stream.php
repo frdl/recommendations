@@ -3,7 +3,7 @@ namespace frdl\common;
  
 interface Stream
 {
-     public function stream_open($url, $mode, $options = \STREAM_REPORT_ERRORS, &$opened_path = null);
+     public function stream_open(string $path, string $mode, int $options = \STREAM_REPORT_ERRORS, string &$opened_path = null) : bool;
      public function dir_closedir();
      public function dir_opendir($path , $options);
      public function dir_readdir();
@@ -11,8 +11,8 @@ interface Stream
      public function mkdir($path , $mode , $options);
      public function rename($path_from , $path_to);
      public function rmdir($path , $options);
- 	   public function stream_cast($cast_as);
- 	   public function stream_close();
+     public function stream_cast($cast_as); 
+     public function stream_close();
      public function stream_eof();
      public function stream_flush();
      public function stream_lock($operation);
