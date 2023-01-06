@@ -4,26 +4,27 @@ namespace frdl\common;
 interface Stream
 {
      public function stream_open(string $path, string $mode, int $options = \STREAM_REPORT_ERRORS, string &$opened_path = null) : bool;
-     public function dir_closedir();
-     public function dir_opendir($path , $options);
-     public function dir_readdir();
-     public function dir_rewinddir();
-     public function mkdir($path , $mode , $options);
-     public function rename($path_from , $path_to);
-     public function rmdir($path , $options);
-     public function stream_cast($cast_as); 
+     public function dir_closedir(): bool;
+     public function dir_opendir(string $path, int $options) : bool;
+     public function dir_readdir() : string | bool;
+     public function dir_rewinddir() : bool;
+     public function mkdir(string $path, int $mode, int $options) : bool;
+     public function rename(string $oldname, string $newname) : bool;
+     public function rmdir(string $path, int $options) : bool;
+     public function stream_cast(int $cast_as); 
      public function stream_close();
-     public function stream_eof();
-     public function stream_flush();
-     public function stream_lock($operation);
-     public function stream_set_option($option , $arg1 , $arg2);
-     public function stream_stat();
-     public function unlink($path);
-     public function url_stat($path , $flags);
-     public function stream_read($count);
-     public function stream_write($data);
-     public function stream_tell();
-     public function stream_seek($offset, $whence);
-     public function stream_metadata($path, $option, $var);
+     public function stream_eof() : bool;
+     public function stream_flush() : bool;
+     public function stream_lock(int $operation) : bool;
+     public function stream_metadata(string $path ,int $option, $value) : bool;
+     public function stream_set_option(int $option, int $arg1, int $arg2) : bool;
+     public function stream_stat() : array;
+     public function unlink(string $path) : bool;
+     public function url_stat(string $path, int $flags) array | bool;
+     public function stream_read(int $count) : string | bool;
+     public function stream_write(string $data) : int | bool;
+     public function stream_tell() : int | bool;
+     public function stream_seek(int $offset, int $whence = \SEEK_SET) : bool;
+     public function stream_truncate(int $new_size) : bool;
  
 }
