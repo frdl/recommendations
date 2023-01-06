@@ -3,7 +3,10 @@ namespace frdl\common;
  
 interface Stream
 {
-     public function stream_open(string $path, string $mode, int $options = \STREAM_REPORT_ERRORS, string &$opened_path = null) : bool;
+     public function stream_open(string $path, 
+								$mode, 
+								int $options = \STREAM_REPORT_ERRORS, 
+								string &$opened_path = null) : resource | bool;
      public function dir_closedir(): bool;
      public function dir_opendir(string $path, int $options) : bool;
      public function dir_readdir() : string | bool;
