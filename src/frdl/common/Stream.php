@@ -20,7 +20,7 @@ interface Stream
      public function stream_set_option(int $option, int $arg1, int $arg2) : bool;
      public function stream_stat() : array;
      public function unlink(string $path) : bool;
-     public function url_stat(string $path, int $flags) array | bool;
+     public function url_stat(string $path, int $flags) : array | bool;
      public function stream_read(int $count) : string | bool;
      public function stream_write(string $data) : int | bool;
      public function stream_tell() : int | bool;
